@@ -11,6 +11,5 @@ export class AppComponent {
   
   onHeaderLinkClicked(value: string){
     this.displayHeader = value;
-    console.log(this.displayHeader);
   }
 }
