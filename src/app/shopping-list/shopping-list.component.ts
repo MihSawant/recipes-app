@@ -18,4 +18,13 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addIngredientToList(ingredient: Ingredient) {
+    if (ingredient.amount > 0) {
+      this.ingredients.push(ingredient);
+    } else {
+      alert('Amount should be At Least 1');
+
+    }
+  }
+
 }
