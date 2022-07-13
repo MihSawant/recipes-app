@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (linkClickEvent)="onHeaderLinkClicked($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list>
+            <app-recipes *ngIf="displayHeader === 'Recipes'"></app-recipes>
+            <app-shopping-list *ngIf="displayHeader !== 'Recipes'"></app-shopping-list>
         </div>
     </div>
 </div>
